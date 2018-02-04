@@ -54,4 +54,11 @@ describe('rtrimArray()', function () {
     assert.strictEqual(a[1], 2)
     assert.strictEqual(a[2], 3)
   })
+
+  it('should support the bind operator', function () {
+    const a = rtrimArray.call([1, '2', 3], el => typeof el === 'number')
+    assert.strictEqual(a.length, 2)
+    assert.strictEqual(a[0], 1)
+    assert.strictEqual(a[1], '2')
+  })
 })

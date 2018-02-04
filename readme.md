@@ -4,7 +4,7 @@ Removes specified values from the end of an array. Analogous to a right-trim ope
 
 ## Installation
 
-Requires [Node.js](https://nodejs.org/) 5.0.0 or above.
+Requires [Node.js](https://nodejs.org/) 6.0.0 or above.
 
 ```bash
 npm i rtrim-array
@@ -16,7 +16,7 @@ The module exports a single function.
 
 ### Parameters
 
-1. `arr` (Array or Array-like): The array that might have ending elements to be removed.
+1. Bindable: `arr` (Array or Array-like): The array that might have ending elements to be removed.
 2. Optional: `trim` (any): A Function that tests elements (returning `true` if the element should be trimmed), or an Array of elements to be trimmed, or any single value that should be trimmed. If this argument is omitted, then `undefined` will be trimmed.
 
 ### Return Value
@@ -60,6 +60,14 @@ If every element in the array is trimmable, an empty array will be returned:
 
 ```javascript
 rtrimArray([undefined]) // []
+```
+
+The module also supports the bind operator:
+
+```javascript
+const rtrim = require('rtrim-array')
+[1, 2, 3, undefined, undefined]::rtrim() // [1, 2, 3]
+[1, 2, 3, undefined, null]::rtrim(null)  // [1, 2, 3, undefined]
 ```
 
 ## Related

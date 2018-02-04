@@ -9,7 +9,8 @@
     "trim",
     "array",
     "elements",
-    "values"
+    "values",
+    "bind operator"
   ],
   "author": "John Lamansky",
   "license": "MIT",
@@ -18,10 +19,11 @@
   "main": "index.js",
   "files": [],
   "engines": {
-    "node": ">=5.0.0"
+    "node": ">=6.0.0"
   },
   "dependencies": {
-    "pfn": "^1.0.0"
+    "pfn": "^1.0.0",
+    "sbo": "^1.0.0"
   },
   "devDependencies": {
     "eslint-config-lamansky": "^1.0.0",
