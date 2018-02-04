@@ -7,12 +7,23 @@ Removes specified values from the end of an array. Analogous to a right-trim ope
 Requires [Node.js](https://nodejs.org/) 5.0.0 or above.
 
 ```bash
-npm install rtrim-array --save
+npm i rtrim-array
 ```
+
+## API
 
 The module exports a single function.
 
-## Usage
+### Parameters
+
+1. `arr` (Array or Array-like): The array that might have ending elements to be removed.
+2. Optional: `trim` (any): A Function that tests elements (returning `true` if the element should be trimmed), or an Array of elements to be trimmed, or any single value that should be trimmed. If this argument is omitted, then `undefined` will be trimmed.
+
+### Return Value
+
+A copy of `arr`, with any trimmable elements removed from the end.
+
+## Examples
 
 By default, `rtrimArray()` removes `undefined` elements from the end of an array.
 
@@ -50,3 +61,7 @@ If every element in the array is trimmable, an empty array will be returned:
 ```javascript
 rtrimArray([undefined]) // []
 ```
+
+## Related
+
+* [ltrim-array](https://github.com/lamansky/ltrim-array): Removes specified values from the beginning of an array.
