@@ -46,4 +46,12 @@ describe('rtrimArray()', function () {
     assert.strictEqual(rtrimArray([undefined, undefined, undefined]).length, 0) // eslint-disable-line no-undefined
     assert.strictEqual(rtrimArray([1, 1, 1], 1).length, 0)
   })
+
+  it('should trim nothing if no elements are trimmable', function () {
+    const a = rtrimArray([1, 2, 3])
+    assert.strictEqual(a.length, 3)
+    assert.strictEqual(a[0], 1)
+    assert.strictEqual(a[1], 2)
+    assert.strictEqual(a[2], 3)
+  })
 })
