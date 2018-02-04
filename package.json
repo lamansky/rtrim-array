@@ -21,7 +21,7 @@
     "node": ">=5.0.0"
   },
   "dependencies": {
-    "possible-function": "^1.0.1"
+    "pfn": "^1.0.0"
   },
   "devDependencies": {
     "eslint-config-lamansky": "^1.0.0",
